@@ -13,16 +13,16 @@
 		<c:when test="${!empty vo}">
 			<h1>로그인 정보</h1>
 			<ul>
-				<li>아이디 : ${item.id}</li>
-				<li>이름 : ${item.name}</li>
-				<li>주소 : ${item.addr}</li>
+				<li>아이디 : ${vo.id}</li>
+				<li>이름 : ${vo.name}</li>
+				<li>주소 : ${vo.addr}</li>
 				
 			</ul>
-			<a href="index.jsp"></a>
+			<a href="/index.jsp">첫 페이지로 이동</a>
 		</c:when>
 		<c:otherwise>
-			<h3>로그인 실패</h3>
-			<a href="login.jsp"></a>
+			<h2>로그인 실패</h2>
+			<a href="login">로그인 페이지로 이동</a>
 		</c:otherwise>	
 	</c:choose>	
 			
