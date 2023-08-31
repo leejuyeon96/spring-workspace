@@ -1,18 +1,17 @@
 package com.kh.mvc.controller;
-​
-import java.util.ArrayList;
+
 import java.util.List;
-​
-import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpSession;
-​
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-​
+
 import com.kh.mvc.model.service.MemberService;
 import com.kh.mvc.model.vo.Member;
+
 ​
 @Controller
 public class MemberController {
@@ -70,13 +69,12 @@ public class MemberController {
 	// signIn - 비즈니스 로직 포함 : 파라미터 값 -> HttpServletRequest request
 	// -> return "login_result"
 	@RequestMapping("signIn")
-	public String singIn(Member vo, HttpServletRequest request) {
+	public String singIn(Member vo, HttpSession session) {
+		
 		
 		
 		Member member = service.login(vo);
 		
-		
-		HttpSession session = request.getSession();
 		
 		if(member!=null) {
 			session.setAttribute("vo", member);
@@ -114,7 +112,7 @@ public class MemberController {
 	
 	// updateMember - 비즈니스 로직 포함 -> 파라미터 request 필요
 	@RequestMapping("updateMember")
-	public String updateMember(Member vo,HttpSession session) {
+	public String updateMember(Member vo, HttpSession session) {
 		
 		
 		service.updateMember(vo);

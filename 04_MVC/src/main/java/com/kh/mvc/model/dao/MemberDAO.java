@@ -14,15 +14,15 @@ public class MemberDAO {
 		return sqlsession.insert("memberMapper.registerMember", vo);
 	}
 	
-	public Member signIn(Member vo) {
-		return sqlsession.selectOne("memberMapper.signIn", vo);
+	public Member login(Member vo) {
+		return sqlsession.selectOne("memberMapper.login", vo);
 	}
 	
-	public List<Member> allMember() {
-		return sqlsession.selectList("memberMapper.allMember");
+	public List<Member> showAllMember() {
+		return sqlsession.selectList("memberMapper.showAllMember");
 	}
-	public List<Member> find(String keyword) {
-		return sqlsession.selectList("memberMapper.find", keyword);
+	public List<Member> findMember(String keyword) {
+		return sqlsession.selectList("memberMapper.findMember", keyword);
 	}
 	public int updateMember(Member vo) {
 		return sqlsession.update("memberMapper.updateMember", vo);

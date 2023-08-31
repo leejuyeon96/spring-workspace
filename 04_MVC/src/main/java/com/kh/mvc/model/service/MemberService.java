@@ -13,17 +13,18 @@ public class MemberService {
 		return dao.registerMember(vo);
 	}
 	
-	public Member signIn(Member vo) {
-		return dao.signIn(vo);
+	
+	public List<Member> showAllMember() {
+		return dao.showAllMember();
 	}
-	public List<Member> allMember() {
-		return dao.allMember();
-	}
-	public List<Member> find(String keyword) {
-		return dao.find(keyword);
+	public List<Member> findMember(String keyword) {
+		return dao.findMember(keyword);
 	}
 	public int updateMember(Member vo) {
 		return dao.updateMember(vo);
+	}
+	public Member login(Member vo) {
+		return dao.login(vo);
 	}
 	
 	

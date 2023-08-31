@@ -19,11 +19,11 @@
 	 	WHERE ID=#{id} AND PASSWORD=#{pwd}
 	 </select>
 	
-	 <select id="allMember" resultMap="memberMap">
+	 <select id="showAllMember" resultMap="memberMap">
 	 	SELECT ID, PASSWORD, NAME, ADDRESS
 	 	FROM MEMBER
 	 </select>
-	 <select id="find" parameterType="String" resultMap="memberMap">
+	 <select id="findMember" parameterType="String" resultMap="memberMap">
 	 	SELECT ID, PASSWORD, NAME, ADDRESS
 	 	FROM MEMBER
 	 	<if test="String!=null">
@@ -33,20 +33,10 @@
 	 	</if>
 	 </select>
 	
-	 <update id="updateMember" parameterType="Member">
-	 	UPDATE MEMBER
-	 	<trim prefix="SET" suffixOverrides=",">
-	 		<if test="pwd!=null">
-	 			PASSWORD=#{pwd},
-	 		</if>
-	 		<if test="name!=null">
-	 			name=#{name},
-	 		</if>
-	 		<if test="addr!=null">
-	 			ADDRESS=#{addr}
-	 		</if>
-	 	</trim>
-	 	WHERE id=#{id}
-	 </update>
+	<update id="updateMember" parameterType="Member">
+		UPDATE member
+		SET password=#{pwd}, name=#{name}, address=#{addr}
+		WHERE id=#{id}
+	</update>
 	
 </mapper>
