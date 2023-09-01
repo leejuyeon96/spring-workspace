@@ -35,9 +35,10 @@
 				
 		<!-- AspectJ -->
 		<dependency>
+			
 			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<version>${org.aspectj-version}</version>
+			<artifactId>aspectjrt</artifactId>  
+			<version>${org.aspectj-version}</version>                                                       
 		</dependency>	
 		
 		<!-- Logging -->
@@ -158,6 +159,14 @@
 		    <version>1.18.28</version>
 		    <scope>provided</scope>
 		</dependency>    
+		
+		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+<dependency>
+    <groupId>commons-fileupload</groupId>
+    <artifactId>commons-fileupload</artifactId>
+    <version>1.5</version>
+</dependency>
+		
 	</dependencies>
     <build>
         <plugins>

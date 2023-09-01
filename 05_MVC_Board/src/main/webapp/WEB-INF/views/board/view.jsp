@@ -25,21 +25,22 @@
 	
 		<h1>게시글 정보</h1>
 		<form action="/board/update" method="post"> 
-			<input type="hidden" name="no" value="${vo.no}">
+			
 			<div class="form-group">
 				<label for="title">Title</label>
-				<input type="text" name="title" id="title" value="${vo.title}" class="form-control"/>
+				<input type="text" name="title" id="title" readonly value="${vo.title}" class="form-control"/>
 			</div>
 			<div class="form-group">
 				<label for="content">Content</label>
-				<textarea name="content" id="content" cols="30" rows="10" class="form-control" style="resize: none">
+				<textarea name="content" id="content" cols="30" rows="10" class="form-control" style="resize: none" readonly>
 				${vo.content}</textarea>
+				<img src="${vo.url}"/>
 			</div>	
 			<div class="form-group">
 				<label for="writer">Writer</label>
 				<input type="text" readonly value="${vo.writer}" id="writer" name="writer" class="form-control"/>
 			</div>		
-			<button type="submit" class="btn btn-outline-warning">등록</button>
+			<a class="btn btn-outline-warning" href="/board/update?no=${vo.no}">수정</a>
 		
 			<a class="btn btn-outline-danger" href="/board/delete?no=${vo.no}">삭제</a>	
 		</form>	 
