@@ -12,7 +12,7 @@ public class Criteria {
 	private int amount; // 한페이지당 몇개의 데이터를 보여줄지
 	
 	public Criteria() {
-		this(1, 20); //기본값 지정해서 처리
+		this(1, 15); //기본값 지정해서 처리
 		
 	}
 	

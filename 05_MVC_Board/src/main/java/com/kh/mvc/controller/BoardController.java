@@ -2,6 +2,7 @@ package com.kh.mvc.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -121,6 +122,14 @@ public class BoardController {
 		
 		service.deleteBoard(no);
 		return "redirect:/board/list";
+	}
+	
+
+	@RequestMapping("/download")
+	public ModelAndView downloadFile(String filename) {
+		HashMap map = new HashMap();
+		map.put("path", path);
+		return new ModelAndView("downloadView", map);
 	}
 }
 	
