@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="phone">
+	
+	<insert id="insert">
+		INSERT INTO phone(num, model, price, vcode)
+		VALUES(#{num}, #{model}, #{price}, #{vcode})
+	</insert>	
+	<!-- Dynamic Query : selectAll + selectOne (num) -->
+	<select id="select">
+		SELECT * FROM phone
+		SELECT 
+	</select>
+	
+	<delete id="delete">
+		DELETE * FROM phone
+		WHERE ={#}
+	</delete>
+	
+	<update id="update">
+		UPDATE phone
+		SET 
+	</update>
+	
+	<!-- Dynamic Query : id와 pw 둘다 입력했을때랑 id 만 입력했을때-->
+	<select id="selectUser">
+		SELECT num, model, price, vcode
+		FROM phone
+		WHERE id={#id}
+	</select>
+	
+	
+</mapper>
