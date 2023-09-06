@@ -8,7 +8,7 @@ import com.kh.practice1.model.dao.FruitDAO;
 
 @Service
 public class FruitService {
-
+	
 	@Autowired
 	private FruitDAO dao;
 	

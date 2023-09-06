@@ -7,11 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<from action="insert">
-		
+	<form action="insert" method="post">
 		 이름 : <input type="text" name="name"><br>
 		 가격 : <input type="text" name="price"><br>
 		 <input type="submit" value="입력">
-	</from>
+	</form>
 </body>
 </html>

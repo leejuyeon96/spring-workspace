@@ -3,10 +3,14 @@
 <mapper namespace="fruit">
 
 	<insert id="insert">
-		INSERT INTO name, price
-		VALUES (name=#{name}, price=#{price})
+		INSERT INTO fruit(name, price)
+		VALUES(#{name}, #{price})
 	</insert>
 	
+	<select id="select" resultType="fruit">
+		SELECT name, price FROM fruit 
+		
+	</select>
 	
 	
 	
