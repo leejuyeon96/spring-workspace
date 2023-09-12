@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="practiceMapper">
+	<resultMap type="Practice" id="practiceMap">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+		
+	</resultMap>
+	<insert id="registerMember" parameterType="Practice">s
+		INSERT INTO member(id, name)
+		VALUES (#{id}, #{name})
+	</insert>
+	
+	<select id="findMember" resultMap="memberMap" parameterType="String">
+	 	SELECT id, name
+	 	FROM member
+	 	<where>
+	 		<if test="keyword!=null">
+	 			id LIKE '%'||#{keyword}||'%'
+	 		</if>
+	 	</where>
+	
+	</select>
+</mapper>

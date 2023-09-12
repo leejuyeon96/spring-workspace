@@ -35,7 +35,6 @@ public class MemberController {
 		List<Member> list = service.findMember(keyword);
 
 		
-		
 		if (list.size() > 0) {
 			model.addAttribute("list", list);
 			return "find_ok";
