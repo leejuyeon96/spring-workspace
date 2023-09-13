@@ -16,8 +16,16 @@
 	 	<where>
 	 		<if test="keyword!=null">
 	 			id LIKE '%'||#{keyword}||'%'
+	 			OR name LIKE '%'||#{keyword}||'%'
+	 			OR address LIKE '%'||#{keyword}||'%'	 			
 	 		</if>
 	 	</where>
 	
 	</select>
+	
+	<update id="updateMember" parameterType="Member">
+		UPDATE member
+		SET password=#{pwd}, name=#{name}
+		WHERE id=#{id}
+	</update>
 </mapper>

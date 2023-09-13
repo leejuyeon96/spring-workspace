@@ -12,6 +12,7 @@
 		INSERT INTO member(id, password, name, address)
 		VALUES(#{id}, #{pwd}, #{name}, #{addr})
 	</insert>
+
 	
 	<select id="showAllMember" resultMap="memberMap">
 		SELECT id, password, name, address

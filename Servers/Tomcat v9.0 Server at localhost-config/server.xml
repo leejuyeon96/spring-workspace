@@ -162,7 +162,7 @@
 
       
       
-      <Context docBase="Practice1" path="/" reloadable="true" source="org.eclipse.jst.jee.server:Practice1"/></Host>
+      <Context docBase="ncsTest1" path="/" reloadable="true" source="org.eclipse.jst.jee.server:ncsTest1"/></Host>
     </Engine>
   </Service>
 </Server>

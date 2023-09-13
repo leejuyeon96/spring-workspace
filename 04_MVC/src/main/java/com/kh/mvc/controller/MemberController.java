@@ -24,6 +24,8 @@ public class MemberController {
 		return "search"; 
 		// -> servletcontext에 "/WEB-INF/views/"뒷부분에 search가 붙어서 그 경로로 가짐
 	}
+	
+	
 
 	// 비즈니스 로직
 	@RequestMapping("find")

@@ -13,7 +13,6 @@ public class MemberService {
 		return dao.registerMember(vo);
 	}
 	
-	
 	public List<Member> showAllMember() {
 		return dao.showAllMember();
 	}
